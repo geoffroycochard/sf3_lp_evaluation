@@ -107,7 +107,8 @@
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
                         <li> <a class="waves-effect waves-dark" href="{{ path('dashboard') }}" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard</span></a></li>
-                        <li> <a class="waves-effect waves-dark" href="{{ path('contact_list') }}" aria-expanded="false"><i class="mdi mdi-account-check"></i><span class="hide-menu">Contact</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="{{ path('demo_list') }}" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">Demo</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-contacts"></i><span class="hide-menu">Contacts</span></a></li>
                         {#<li> <a class="waves-effect waves-dark" href="table-basic.html" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">Table</span></a></li>#}
                         {#<li> <a class="waves-effect waves-dark" href="icon-material.html" aria-expanded="false"><i class="mdi mdi-emoticon"></i><span class="hide-menu">Icons</span></a></li>#}
                         {#<li> <a class="waves-effect waves-dark" href="map-google.html" aria-expanded="false"><i class="mdi mdi-earth"></i><span class="hide-menu">Map</span></a></li>#}
@@ -148,28 +149,28 @@
         <!-- ============================================================== -->
         <!-- All Jquery -->
         <!-- ============================================================== -->
-        <script src="/public/plugins/jquery/jquery.min.js"></script>
+        <script src="{{ asset('/public/plugins/jquery/jquery.min.js') }}"></script>
         <!-- Bootstrap popper Core JavaScript -->
-        <script src="/public/plugins/bootstrap/js/popper.min.js"></script>
-        <script src="/public/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <script src="{{ asset('/public/plugins/bootstrap/js/popper.min.js') }}"></script>
+        <script src="{{ asset('/public/plugins/bootstrap/js/bootstrap.min.js') }}"></script>
         <!-- slimscrollbar scrollbar JavaScript -->
-        <script src="/public/js/perfect-scrollbar.jquery.min.js"></script>
+        <script src="{{ asset('/public/js/perfect-scrollbar.jquery.min.js') }}"></script>
         <!--Wave Effects -->
-        <script src="/public/js/waves.js"></script>
+        <script src="{{ asset('/public/js/waves.js') }}"></script>
         <!--Menu sidebar -->
-        <script src="/public/js/sidebarmenu.js"></script>
+        <script src="{{ asset('/public/js/sidebarmenu.js') }}"></script>
         <!--Custom JavaScript -->
-        <script src="/public/js/custom.min.js"></script>
+        <script src="{{ asset('/public/js/custom.min.js') }}"></script>
         <!-- ============================================================== -->
         <!-- This page plugins -->
         <!-- ============================================================== -->
-        <script src="/public/plugins/chartist-js/dist/chartist.min.js"></script>
-        <script src="/public/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js"></script>
+        <script src="{{ asset('/public/plugins/chartist-js/dist/chartist.min.js') }}"></script>
+        <script src="{{ asset('/public/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js') }}"></script>
         <!--c3 JavaScript -->
-        <script src="/public/plugins/d3/d3.min.js"></script>
-        <script src="/public/plugins/c3-master/c3.min.js"></script>
+        <script src="{{ asset('/public/plugins/d3/d3.min.js') }}"></script>
+        <script src="{{ asset('/public/plugins/c3-master/c3.min.js') }}"></script>
         <!-- Chart JS -->
-        <script src="/public/js/dashboard.js"></script>
+        <script src="{{ asset('/public/js/dashboard.js') }}"></script>
 
             {% block javascripts %}{% endblock %}
     </body>
