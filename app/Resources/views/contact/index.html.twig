@@ -1,0 +1,61 @@
+{% extends "base.html.twig" %}
+
+{% block title %}AppBundle:Contact:index{% endblock %}
+
+{% block body %}
+    <!-- ============================================================== -->
+    <!-- Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <div class="row page-titles">
+        <div class="col-md-5 align-self-center">
+            <h3 class="text-themecolor">Liste des contacts</h3>
+        </div>
+        <div class="col-md-7 align-self-center">
+            <a href="{{ path('contact_new') }}" class="btn waves-effect waves-light btn-warning pull-right hidden-sm-down"> Ajouter</a>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Start Page Content -->
+    <!-- ============================================================== -->
+    <div class="row">
+        <!-- column -->
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Contact</h4>
+                    <h6 class="card-subtitle">#{{ contacts|length }}</h6>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Last Name</th>
+                                <th>Organization</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for contact in contacts %}
+                                <tr>
+                                    <td>{{ contact.id }}</td>
+                                    <td>{{ contact.lastname }}</td>
+                                    <td>{{ contact.organization.name }}</td>
+                                    <td>
+                                        <a href="{{ path('contact_edit', {id: contact.id}) }}" class="btn waves-effect waves-light btn-default pull-right hidden-sm-down"> Edition</a>
+
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
