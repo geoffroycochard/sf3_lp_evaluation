@@ -32,15 +32,13 @@
             <div class="card">
                 <div class="card-body">
 
-                    {{ form_start(form) }}
+                    {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
                     {{ form_widget(form) }}
                     {{ form_end(form) }}
-
 
                 </div>
             </div>
         </div>
-    </div>
     </div>
 
 {% endblock %}
