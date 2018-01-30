@@ -2,7 +2,7 @@ Evaluation
 ==========
 
 ### Description
-Dans un Bundle ContactBundle, nous voulons gérer des Contacts.
+Dans le Bundle AppBundle, nous voulons gérer des Contacts.
 - Avoir un liste de contact avec le nom et l'organisation.
 - Une vue d'édition.
 - Une vue de visualisation rendant visible toutes les informations.
